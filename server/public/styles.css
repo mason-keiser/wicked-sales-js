@@ -1,0 +1,36 @@
+.navbar {
+    background-color:#24292e;
+    height: 70px;
+    margin-bottom: 2rem;
+}
+
+.title {
+    color: white;
+    font-size: 2rem;
+}
+
+span {
+    size: 1
+}
+
+.card {
+    box-shadow: -3px 2px 5px grey;
+    height: 435px;
+    margin-left: 2rem;
+}
+
+.cardImg {
+    border-bottom: solid grey 1px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(238, 234, 234));
+}
+
+.card-price {
+    font-size: 1.3rem;
+}
