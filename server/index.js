@@ -33,6 +33,19 @@ app.get('/api/products', (req, res, next) => {
     .catch(err => next(err));
 });
 
+app.get('api/products/:productId', (req, res, next) => {
+  const sql = `
+  SELECT *
+  FROM  "products"
+  WHERE "productId" = $1
+  `
+  const value = req.params.productId;
+  db.query(sql, value)
+    .then(res => {
+     
+    })
+})
+
 app.use('/api', (req, res, next) => {
   next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
 });
@@ -46,7 +59,10 @@ app.use((err, req, res, next) => {
       error: 'an unexpected error occurred'
     });
   }
-});
+})
+.catch(
+
+)
 
 app.listen(process.env.PORT, () => {
   // eslint-disable-next-line no-console
