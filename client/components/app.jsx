@@ -1,11 +1,13 @@
 import React from 'react';
+import Header from './header';
+import Productitem from './productItem';
+import ProductList from './productList'
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: null,
-      isLoading: true
+      products: []
     };
   }
 
@@ -17,9 +19,21 @@ export default class App extends React.Component {
       .finally(() => this.setState({ isLoading: false }));
   }
 
+  viewProducts() {
+    fetch('api/products')
+      .then(res => res.json())
+      .then(data => 
+        process.stdout.write(data))
+  }
+
   render() {
-    return this.state.isLoading
-      ? <h1>Testing connections...</h1>
-      : <h1>{ this.state.message }</h1>;
+   return (
+    <div>
+      <Header/>
+      <div>
+        <ProductList/>
+      </div>
+    </div>
+   );
   }
 }
