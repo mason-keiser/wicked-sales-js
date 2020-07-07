@@ -33,17 +33,23 @@ app.get('/api/products', (req, res, next) => {
     .catch(err => next(err));
 });
 
-app.get('api/products/:productId', (req, res, next) => {
+app.get('/api/products/:productId', (req, res, next) => {
   const sql = `
   SELECT *
   FROM  "products"
   WHERE "productId" = $1
   `
-  const value = req.params.productId;
+  const value = [req.params.productId];
   db.query(sql, value)
-    .then(res => {
-     
+    .then(result => {
+      const product = result.rows[0];
+      if (!product) {
+        next(new ClientError(`Cannot find product with product id ${value}`, 404))
+      } else {
+        res.json(product)
+      }
     })
+    .catch(err => next(err))
 })
 
 app.use('/api', (req, res, next) => {
@@ -60,9 +66,6 @@ app.use((err, req, res, next) => {
     });
   }
 })
-.catch(
-
-)
 
 app.listen(process.env.PORT, () => {
   // eslint-disable-next-line no-console
