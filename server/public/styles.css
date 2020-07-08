@@ -1,3 +1,6 @@
+body {
+    overflow-y: auto;
+}
 .navbar {
     background-color:#24292e;
     height: 70px;
@@ -17,6 +20,7 @@ span {
     box-shadow: -3px 2px 5px grey;
     height: 435px;
     margin-left: 2rem;
+    overflow-y: auto;
 }
 
 .cardImg {
@@ -33,4 +37,18 @@ span {
 
 .card-price {
     font-size: 1.3rem;
+}
+
+.detailsCard {
+    box-shadow: -3px 2px 5px grey;
+    height: fit-content;
+    padding: 5px;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(238, 234, 234));
+}
+
+.detailsImg {
+    box-shadow: -3px 2px 5px rgb(226, 225, 225);
+    background-color: inherit;
+    margin-left: 5px;
+    margin-top: 10px;
 }

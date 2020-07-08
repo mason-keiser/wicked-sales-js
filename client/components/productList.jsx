@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductItem from './productItem'
 
-class ProductList extends React.Component {
+export default class ProductList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,7 +33,8 @@ class ProductList extends React.Component {
             return (
               <ProductItem
                 key={product.productId}
-                product={product}/>
+                product={product}
+                view={this.props.view}/>
             );
           })}
         </div>
@@ -42,6 +43,3 @@ class ProductList extends React.Component {
     )
   }
 }
-
-
-export default ProductList
