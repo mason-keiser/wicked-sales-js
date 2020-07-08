@@ -131,9 +131,22 @@ app.post('/api/cart', (req, res, next) => {
         .then(response => res.status(201).json(response.rows[0]));
     })
     .catch(err => next(err));
-
 });
 
+app.post('/api/orders', (req, res, next) => {
+  if(!req.session.cartId) {
+    throw new ClientError("there isn't a cart connected to this order", 400)
+  } else {
+    const sql = `
+    INSERT INTO "orders" ("cartId", "name", "creditCard", "shippingAddress")
+    VALUES      ($1, $2, $3, $4)
+    RETURNING   "creditCard", "name", "shippingAddress", "orderId", "createdAt"
+    `
+    const params = [req.session.cartId, req.body.name, req.body.creditCard, req.body.shippingAddress];
+    return db.query(sql, params)
+      .then(result => { res.status(201).json(result.rows[0]) })
+  }
+})
 
 app.use('/api', (req, res, next) => {
   next(new ClientError(`cannot ${req.method} ${req.originalUrl}`, 404));
