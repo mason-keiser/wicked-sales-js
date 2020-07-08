@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './header';
 import ProductList from './productList'
 import ProductDetails from './product-details';
+import CartSummary from './cartSummary'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -65,7 +66,7 @@ export default class App extends React.Component {
     const changeView = this.state.view.name === 'catalog' 
       ? <ProductList view={this.setView} />
       : this.state.view.name === 'cart'
-        ? null
+        ? <CartSummary products={this.state.cart} setView={this.setView}/>
         : <ProductDetails addToCart={this.addToCart} params={this.state.view.params} setView={this.setView}/>;
     return (
       <div>
