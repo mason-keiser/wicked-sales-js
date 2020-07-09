@@ -22,7 +22,7 @@ export default class ProductDetails extends React.Component {
     render() {
         return this.state.product 
         ? (
-          <div className="container">
+          <div className="container mt-5 mb-5">
             <div className="detailsCard ">
               <div onClick={() => this.setView('catalog', {})}>&lt; Back to Catalog</div>
               <div className="row">
