@@ -6,7 +6,7 @@ export default class CartSummary extends React.Component {
         if (this.props.products.length === 0) {
           return (
             <div>
-              <div onClick={() => this.setView('catalog', {})}>&lt; Back to Catalog</div>
+              <div onClick={() => this.props.setView('catalog', {})}>&lt; Back to Catalog</div>
               <h1 className="cart-title">My Cart</h1>
               <div>
                 <h1>Your Cart is currently empty</h1>
@@ -28,7 +28,7 @@ export default class CartSummary extends React.Component {
             <div onClick={() => this.props.setView('catalog', {})}>&lt; Back to Catalog</div>
             <div className='checkout'>
               <h2>Cart total: ${(cartTotal / 100).toFixed(2)}</h2>
-              <button className="btn addToCart" onClick={() => this.setView('checkout', {})}>Checkout</button>
+              <button className="btn addToCart" onClick={() => this.props.setView('checkout', {})}>Checkout</button>
             </div>
             <div className= 'cart-column'>
               <h1 className="cart-title">My Cart</h1>
