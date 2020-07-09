@@ -4,11 +4,11 @@ export default class CheckoutForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      nameValue: '',
+      emailValue: '',
       creditCardValue: '',
       shippingAddressValue: ''
     };
-    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleCreditCardChange = this.handleCreditCardChange.bind(this);
     this.handleShippingAddressChange = this.handleShippingAddressChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,9 +24,9 @@ export default class CheckoutForm extends React.Component {
     callback(obj);
   }
 
-  handleNameChange() {
+  handleEmailChange() {
     this.setState({
-      nameValue: event.target.value
+      emailValue: event.target.value
     });
   }
 
@@ -57,8 +57,8 @@ export default class CheckoutForm extends React.Component {
         <h4 className="text-muted">Order Total: {this.calculateTotal()}</h4>
         <form onSubmit={() => this.handleSubmit(this.props.placeOrder)}>
           <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input type="text" className="form-control" name="name" id="name" value={this.state.nameValue} onChange={this.handleNameChange} />
+            <label htmlFor="name">Email</label>
+            <input type="text" className="form-control" name="name" id="name" value={this.state.emailValue} onChange={this.handleEmailChange} />
           </div>
           <div className="form-group">
             <label htmlFor="creditCard">Credit Card</label>
@@ -70,7 +70,7 @@ export default class CheckoutForm extends React.Component {
           </div>
           <div className="d-flex justify-content-between">
             <p onClick={() => this.props.setView('catalog', {})}>&lt; Continue Shopping</p>
-            <button onSubmit={this.props.placeOrder} type="submit" className="btn addToCart ml-2">Place Order</button>
+            <button onClick={() => this.props.setView('modal', {})} onSubmit={() => this.props.placeOrder} type="submit" className="btn addToCart ml-2">Place Order</button>
           </div>
         </form>
       </div>

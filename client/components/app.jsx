@@ -4,7 +4,7 @@ import ProductList from './productList'
 import ProductDetails from './product-details';
 import CartSummary from './cartSummary'
 import CheckoutForm from './checkoutForm';
-
+import Modal from './modal'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -81,7 +81,9 @@ export default class App extends React.Component {
         ? <CartSummary products={this.state.cart} setView={this.setView}/>
         : this.state.view.name === 'checkout'
           ? <CheckoutForm products={this.state.cart} placeOrder={this.placeOrder} setView={this.setView}/>
-          : <ProductDetails addToCart={this.addToCart} params={this.state.view.params} setView={this.setView}/>;
+          : this.state.view.name === 'modal'
+            ? <Modal setView={this.setView}/>
+            : <ProductDetails addToCart={this.addToCart} params={this.state.view.params} setView={this.setView}/>;
     return (
       <div>
         <Header cartNumber={this.state.cart.length} setView={this.setView}/>

@@ -98,3 +98,22 @@ span {
     box-shadow: -3px 2px 5px rgb(226, 225, 225);
     background-color: inherit;
 }
+
+.modalContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(238, 234, 234));
+    height: 600px;
+    width: 500px;
+    box-shadow: -3px 2px 5px rgb(226, 225, 225);
+    margin-top: 5rem;
+    padding: 10px;
+}
+
+.gif {
+    box-shadow: -3px 2px 5px rgb(226, 225, 225);
+    background-color: inherit;
+}
