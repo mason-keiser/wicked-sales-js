@@ -71,7 +71,7 @@ export default class App extends React.Component {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(orderInfo)
     });
-    this.setState({ cart: [], view: { name: 'catalog', params: {} } });
+    this.setState({ cart: [] });
   }
 
   render() {

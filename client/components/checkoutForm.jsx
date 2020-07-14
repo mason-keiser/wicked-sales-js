@@ -73,7 +73,11 @@ export default class CheckoutForm extends React.Component {
   }
 
   showModal(string) {
-    
+    string === 'ordered'
+      ? this.setState({ modal: 'ordered'})
+      : string === 'hidden'
+        ? this.setState({ modal: 'hidden'})
+        : null
   }
 
   render() {
@@ -96,7 +100,7 @@ export default class CheckoutForm extends React.Component {
           </div>
           <div className="d-flex justify-content-between">
             <p onClick={() => this.props.setView('catalog', {})}>&lt; Continue Shopping</p>
-            <button onSubmit={() => this.handleSubmit} type="submit" className="btn addToCart ml-2">Place Order</button>
+            <button onClick={() => this.showModal('ordered')} type="submit" className="btn addToCart ml-2">Place Order</button>
           </div>
         </form>
       </div>
