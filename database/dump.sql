@@ -229,19 +229,6 @@ ALTER TABLE ONLY public.products ALTER COLUMN "productId" SET DEFAULT nextval('p
 --
 
 COPY public."cartItems" ("cartItemId", "cartId", "productId", price) FROM stdin;
-1	1	1	2999
-2	2	2	2595
-3	2	2	2595
-4	2	2	2595
-5	2	2	2595
-6	2	6	830
-7	2	1	2999
-8	2	1	2999
-9	2	1	2999
-10	2	1	2999
-11	2	1	2999
-12	2	2	2595
-13	2	5	9900
 \.
 
 
@@ -250,8 +237,6 @@ COPY public."cartItems" ("cartItemId", "cartId", "productId", price) FROM stdin;
 --
 
 COPY public.carts ("cartId", "createdAt") FROM stdin;
-1	2020-07-08 18:11:08.207204+00
-2	2020-07-08 21:21:00.769014+00
 \.
 
 
@@ -260,6 +245,13 @@ COPY public.carts ("cartId", "createdAt") FROM stdin;
 --
 
 COPY public.orders ("orderId", "cartId", name, "creditCard", "shippingAddress", "createdAt") FROM stdin;
+3	1	mason	1234123512	9 sunningdale	2020-07-14 03:11:26.020496+00
+5	5	masonksr5@gmail.com	8980809	9 sunningdale	2020-07-14 03:17:13.208745+00
+6	5	legallycara@hotmail.com	23423532567	9 Sunningdale	2020-07-14 03:20:46.564442+00
+7	5	legallycara@hotmail.com	19187439713240	9 Sunningdale	2020-07-14 03:26:30.822579+00
+8	3	jim@gmail.com	2351351	9 Sunningdale	2020-07-14 21:53:44.219207+00
+9	3	legallycara@hotmail.com	8980809	9 Sunningdale	2020-07-14 21:56:05.826889+00
+10	3	masonksr5@gmail.com	8980809	9 sunningdale	2020-07-14 21:56:36.187154+00
 \.
 
 
@@ -281,21 +273,21 @@ COPY public.products ("productId", name, price, image, "shortDescription", "long
 -- Name: cartItems_cartItemId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 13, true);
+SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 20, true);
 
 
 --
 -- Name: carts_cartId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."carts_cartId_seq"', 2, true);
+SELECT pg_catalog.setval('public."carts_cartId_seq"', 3, true);
 
 
 --
 -- Name: orders_orderId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."orders_orderId_seq"', 1, false);
+SELECT pg_catalog.setval('public."orders_orderId_seq"', 10, true);
 
 
 --

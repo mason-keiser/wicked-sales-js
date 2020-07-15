@@ -73,7 +73,7 @@ app.get('/api/cart', (req, res, next) => {
 })
 
 
-app.post('/api/cart', (req, res, next) => {
+app.post('/api/carts', (req, res, next) => {
   const productId = parseInt(req.body.productId);
   if (!Number.isInteger(productId) || productId <= 0) {
     return res.status(400).json({ error: 'productId must be a positive integer' });
@@ -150,6 +150,30 @@ app.post('/api/orders', (req, res, next) => {
       })
       .catch(err => next(err))
   }
+})
+
+app.delete('/api/cartItems/:cartItemId', (req, res, next) => {
+  const { cartItemId } = req.params;
+  const sql = `
+    DELETE FROM "cartItems"
+    WHERE       "cartItemId" = $1
+    RETURNING *
+    `;
+  const id = [cartItemId];
+  db.query(sql, id)
+    .then(result => {
+      const returnedCart = result.rows[0];
+
+      if (!returnedCart) {
+        return res.status(404).json({ error: `Cannot find cart with "cartItemId" ${cartItemId}` });
+      } else {
+        return res.status(204).json({ returnedCart: `Successfully deleted ${cartItemId}` });
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'An unexpected error occurred.' });
+    });
 })
 
 app.use('/api', (req, res, next) => {

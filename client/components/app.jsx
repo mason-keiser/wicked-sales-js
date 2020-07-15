@@ -54,7 +54,7 @@ export default class App extends React.Component {
   }
 
   addToCart(product) {
-    fetch('/api/cart', {
+    fetch('/api/carts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
