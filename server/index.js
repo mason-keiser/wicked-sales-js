@@ -152,22 +152,20 @@ app.post('/api/orders', (req, res, next) => {
   }
 })
 
-app.delete('/api/cartItems/:cartItemId', (req, res, next) => {
-  const { cartItemId } = req.params;
+app.delete('/api/cartItems', (req, res, next) => {
   const sql = `
-    DELETE FROM "cartItems"
-    WHERE       "cartItemId" = $1
+    DELETE FROM "cartItems" 
+    WHERE       1 = 1
     RETURNING *
     `;
-  const id = [cartItemId];
-  db.query(sql, id)
+  db.query(sql)
     .then(result => {
       const returnedCart = result.rows[0];
 
       if (!returnedCart) {
-        return res.status(404).json({ error: `Cannot find cart with "cartItemId" ${cartItemId}` });
+        return res.status(404).json({ error: `Cannot find cartItems` });
       } else {
-        return res.status(204).json({ returnedCart: `Successfully deleted ${cartItemId}` });
+        return res.status(204).json({ returnedCart: `Successfully deleted cartItems` });
       }
     })
     .catch(err => {

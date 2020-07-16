@@ -21,7 +21,8 @@ export default class CartSummary extends React.Component {
           return (
             <CartSummaryItem 
               key={product.cartItemId}
-              product={product} />
+              product={product}
+              removeFromCart={this.props.removeFromCart} />
             );
         });
         return (
@@ -29,7 +30,10 @@ export default class CartSummary extends React.Component {
             <div onClick={() => this.props.setView('catalog', {})}>&lt; Back to Catalog</div>
             <div className='checkout'>
               <h2>Cart total: ${(cartTotal / 100).toFixed(2)}</h2>
-              <button className="btn addToCart" onClick={() => this.props.setView('checkout', {})}>Checkout</button>
+              <div className='buttonCont'>
+                <button className="btn addToCart" onClick={() => this.props.setView('checkout', {})}>Checkout</button>
+                <button type="button" className="close" aria-label="Close" onClick={this.props.removeFromCart}>Clear Cart</button>
+              </div>
             </div>
             <div className= 'cart-column'>
               <h1 className="cart-title">My Cart</h1>
