@@ -23,7 +23,7 @@ Link: https://wicked-sales.masonkeiser.com/
 ## System Requirements
 * Node.js 10 or higher
 * NPM 6 or higher
-* PostgreSQL 10 or highers
+* PostgreSQL 10 or higher
 # Getting Started
 1. Clone this repository:
 ```
