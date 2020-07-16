@@ -137,3 +137,7 @@ span {
     flex-direction: column;
     justify-content: space-evenly;
 }
+
+.card-body:hover {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255));
+}
