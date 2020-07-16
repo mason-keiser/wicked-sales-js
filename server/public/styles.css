@@ -74,6 +74,10 @@ span {
     color: white;
 }
 
+.addToCart:hover {
+    background-image: linear-gradient(to bottom, rgb(79, 79, 241), rgb(87, 188, 255));
+}
+
 .summaryCard {
     margin-right: 5rem;
     box-shadow: -3px 2px 5px grey;
