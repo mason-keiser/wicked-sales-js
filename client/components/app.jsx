@@ -20,6 +20,7 @@ export default class App extends React.Component {
     this.setView = this.setView.bind(this);
     this.addToCart = this.addToCart.bind(this);
     this.placeOrder = this.placeOrder.bind(this);
+    this.removeFromCart = this.removeFromCart.bind(this);
   }
 
   componentDidMount() {
@@ -54,7 +55,7 @@ export default class App extends React.Component {
   }
 
   addToCart(product) {
-    fetch('/api/cart', {
+    fetch('/api/carts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -74,11 +75,26 @@ export default class App extends React.Component {
     this.setState({ cart: [], view: {name: 'modal', params: {} } })
   }
 
+  removeFromCart() {
+    fetch(`/api/cartItems`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    })
+    .then(id => {
+      this.setState({
+        cart: this.state.cart.filter(el => el.cartItemId == id)
+      });
+    });
+}
+
+
   render() {
     const changeView = this.state.view.name === 'catalog' 
       ? <ProductList view={this.setView} />
       : this.state.view.name === 'cart'
-        ? <CartSummary products={this.state.cart} setView={this.setView}/>
+        ? <CartSummary products={this.state.cart} removeFromCart={this.removeFromCart} setView={this.setView}/>
         : this.state.view.name === 'checkout'
           ? <CheckoutForm products={this.state.cart} placeOrder={this.placeOrder} setView={this.setView}/>
           : this.state.view.name === 'modal'

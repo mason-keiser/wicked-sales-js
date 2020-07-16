@@ -25,7 +25,7 @@ span {
     overflow-y: auto;
 }
 
-.cardImg {
+.card-img-top {
     border-bottom: solid grey 1px;
 }
 
@@ -36,6 +36,15 @@ span {
     align-items: center;
     background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(238, 234, 234));
 }
+
+.cardBody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(238, 234, 234));
+}
+
 
 .card-price {
     font-size: 1.3rem;
@@ -66,8 +75,6 @@ span {
 }
 
 .summaryCard {
-    display: flex;
-    flex-direction: column;
     margin-right: 5rem;
     box-shadow: -3px 2px 5px grey;
     background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(238, 234, 234));
@@ -116,4 +123,17 @@ span {
 .gif {
     box-shadow: -3px 2px 5px rgb(226, 225, 225);
     background-color: inherit;
+}
+
+.close {
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.buttonCont {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
