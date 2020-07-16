@@ -7,6 +7,7 @@ A full stack Node.js and React shopping cart app.
 * PostgreSQL
 * Webpack 4
 * HTML 5
+* CSS 3
 * Bootstrap 4
 * AWS EC2
 # Live Demo
