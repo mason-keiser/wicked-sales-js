@@ -57,6 +57,3 @@ pgweb --db=wickedSales
 ```
 npm run dev
 ```
-# Mobile Responsive
-* Desktop
-* iPad (Landscape)
