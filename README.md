@@ -57,3 +57,5 @@ pgweb --db=wickedSales
 ```
 npm run dev
 ```
+# Preview
+![](server/public/images/ws.png)
