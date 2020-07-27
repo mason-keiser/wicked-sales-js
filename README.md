@@ -1,5 +1,7 @@
 # wicked-sales-js
 A full stack Node.js and React shopping cart app.
+
+Link: https://wicked-sales.masonkeiser.com/
 # Technologies Used
 * React.js
 * Node.js
@@ -10,8 +12,6 @@ A full stack Node.js and React shopping cart app.
 * CSS 3
 * Bootstrap 4
 * AWS EC2
-# Live Demo
-Link: https://wicked-sales.masonkeiser.com/
 # Features
 * User can view a catalog of products
 * User can view the details of an individual product
