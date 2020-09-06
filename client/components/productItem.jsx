@@ -5,7 +5,7 @@ export default class ProductItem extends React.Component {
         const product = this.props.product;
         const price = Number(product.price)
         return (
-          <div className="product my-4 col-4 pb-3" id={product.productId}>
+          <div className="col-md-6 col-lg-4 d-flex align-items-stretch mt-4 mb-2 fade-in" id={product.productId}>
             <div className="card" onClick={() => this.props.view('details', { productId: this.props.product.productId})}>
               <img src={product.image} className="card-img-top h-50 cardImg" alt={product.name} />
               <div className="card-body">
