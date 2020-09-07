@@ -8,7 +8,7 @@ export default class Home extends React.Component {
         width: '100%'
       }
       : {
-        height: '800px',
+        height: '900px',
         width: '100%'
       }
       const hideHome = (this.props.name.name !== 'catalog')
@@ -16,6 +16,9 @@ export default class Home extends React.Component {
         display: 'none'
       }
       : null
+      const backgroundImg = (window.screen.width < 600)
+        ? <img src="images/iphone.jpg" alt="homePage" style={height} />
+        :    <img src="images/mountain.jpg" alt="homePage" style={height} />
         return (
             <div style={hideHome}>
                 <div id="buttonDiv" style={hideHome}>
@@ -23,7 +26,7 @@ export default class Home extends React.Component {
                         const element = document.getElementById('productList').scrollIntoView()
                     }}> Click Here</button>
                 </div>
-                <img src="images/dark.jpg" alt="homePage" style={height} />
+                {backgroundImg}
             </div>
         );
     }

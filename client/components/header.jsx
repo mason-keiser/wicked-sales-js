@@ -2,9 +2,13 @@ import React from 'react';
 
 class Header extends React.Component {
     render() {
-  
+      const hideOrShow = (this.props.view.name === 'catalog' && this.props.cartNumber === 0)
+        ? {
+            display: 'none'
+        }
+        : null
         return(
-            <div className='navbar'>
+            <div className='navbar' style={hideOrShow}>
                 <div className='titleContainer' onClick={() => this.props.setView('catalog', {})}>
                     <div className='title'><span className='fas fa-dollar-sign mr-2'></span>Wicked Sales</div>
                 </div>
