@@ -27,7 +27,7 @@ export default class ProductList extends React.Component {
 
   render() {
     return(
-      <div className="container mt-2">
+      <div className="container mt-2" id='productList'>
         <div className="row row-cols-1 row-cols-md-1 product-container ">
           {this.state.products.map(product => {
             return (

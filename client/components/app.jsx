@@ -5,6 +5,7 @@ import ProductDetails from './product-details';
 import CartSummary from './cartSummary'
 import CheckoutForm from './checkoutForm';
 import Modal from './modal'
+import Home from './home';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -91,6 +92,11 @@ export default class App extends React.Component {
 
 
   render() {
+    const hideHome = (this.state.view.name !== 'catalog')
+      ? {
+        display: 'hidden'
+      }
+      : null
     const changeView = this.state.view.name === 'catalog' 
       ? <ProductList view={this.setView} />
       : this.state.view.name === 'cart'
@@ -103,6 +109,7 @@ export default class App extends React.Component {
     return (
       <div>
         <Header cartNumber={this.state.cart.length} setView={this.setView}/>
+        <Home name={this.state.view}/>
         {changeView}     
       </div>
    );

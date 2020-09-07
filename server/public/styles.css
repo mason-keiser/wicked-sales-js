@@ -1,12 +1,30 @@
 body {
     overflow-y: auto;
+    scroll-behavior: smooth;    
 }
 
+#homePageButton {
+    background-color: transparent;
+    font-size: 2rem;
+    border: white 3px solid;
+    color: white;
+    scroll-behavior: smooth;
+}
 
+#buttonDiv {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 45%;
+    text-align: center;
+}
 
 .navbar {
     background-color:#333333;
     height: 70px;
+    width: 100%;
 }
 
 .title {
