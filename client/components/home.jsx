@@ -11,20 +11,32 @@ export default class Home extends React.Component {
         height: '900px',
         width: '100%'
       }
-      const hideHome = (this.props.name.name !== 'catalog')
+    const hideHome = (this.props.name.name !== 'catalog')
       ? {
         display: 'none'
       }
       : null
-      const backgroundImg = (window.screen.width < 600)
+    const backgroundImg = (window.screen.width < 600)
         ? <img src="images/iphone.jpg" alt="homePage" style={height} />
         :    <img src="images/mountain.jpg" alt="homePage" style={height} />
+    const stylin = (window.screen.width < 600)
+      ? {
+          fontSize: '3rem',
+          paddingBottom: '2rem',
+          color: 'white'
+      }
+      : {
+        color: 'white',
+        fontSize: '5rem',
+        paddingBottom: '2rem'
+      }
         return (
             <div style={hideHome}>
                 <div id="buttonDiv" style={hideHome}>
+                    <h1 id= "title" className="text-white"style={stylin}>Wicked Sales</h1>
                     <button id='homePageButton' onClick={() => {
                         const element = document.getElementById('productList').scrollIntoView()
-                    }}> Click Here</button>
+                    }}>View Products</button>
                 </div>
                 {backgroundImg}
             </div>
