@@ -43,14 +43,10 @@ span {
 }
 
 .card {
-    box-shadow: 0px 2px 5px grey;
+
     height: 435px;
     
     overflow-y: auto;
-}
-
-.card-img-top {
-    border-bottom: solid grey 1px;
 }
 
 .card-body{
@@ -58,7 +54,7 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(238, 234, 234));
+
 }
 
 .cardBody{
@@ -66,7 +62,7 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(238, 234, 234));
+
 }
 
 
@@ -75,16 +71,26 @@ span {
 }
 
 .detailsCard {
-    box-shadow: -3px 2px 5px grey;
     height: fit-content;
     padding: 5px;
-    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(238, 234, 234));
+}
+
+@media screen and (maxwidth: 600) {
+    .detail-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto 0;
+    }
+    
+    .addToCart {
+        margin: auto 0;
+        width: auto;
+    }
 }
 
 .detailsImg {
-    box-shadow: -3px 2px 5px rgb(226, 225, 225);
     background-color: inherit;
-    margin-left: 5px;
     margin-top: 10px;
 }
 
@@ -104,8 +110,7 @@ span {
 
 .summaryCard {
     margin-right: 5rem;
-    box-shadow: -3px 2px 5px grey;
-    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(238, 234, 234));
+
     margin-top: 12px;
     margin-bottom: 12px;
     border: transparent 1px grey;
