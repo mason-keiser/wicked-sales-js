@@ -4,7 +4,7 @@ export default class Home extends React.Component {
     render() {
     const height = (window.screen.width < 600)
       ? {
-        height: '700px',
+        height: '725px',
         width: '100%'
       }
       : {
@@ -22,7 +22,6 @@ export default class Home extends React.Component {
     const stylin = (window.screen.width < 600)
       ? {
           fontSize: '3rem',
-          paddingBottom: '2rem',
           color: 'white'
       }
       : {

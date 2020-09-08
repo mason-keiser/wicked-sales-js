@@ -1,7 +1,6 @@
 body {
     overflow-y: auto;
     scroll-behavior: smooth;    
-    background-color: #333333;
 }
 
 #homePageButton {
