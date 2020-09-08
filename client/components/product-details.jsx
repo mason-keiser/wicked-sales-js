@@ -20,10 +20,15 @@ export default class ProductDetails extends React.Component {
     }
 
     render() {
+      const align = (window.screen.width < 600)
+      ? {
+        textAlign: 'center'
+      }
+      : null
         return this.state.product 
         ? (
           <div className="container mt-5 mb-5">
-            <div className="detailsCard">
+            <div className="detailsCard" style={align}>
               <div onClick={() => this.setView('catalog', {})}>&lt; Back to Catalog</div>
               <div className="row row-cols-1 row-cols-md-1">
                 <div className="col-lg-5 col-xs-12">

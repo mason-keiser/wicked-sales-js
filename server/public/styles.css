@@ -75,17 +75,16 @@ span {
     padding: 5px;
 }
 
-@media screen and (maxwidth: 600) {
-    .detail-row {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: auto 0;
-    }
-    
+@media screen and (max-width: 600) {
+
     .addToCart {
         margin: auto 0;
         width: auto;
+    }
+    
+    .detailsCard {
+        text-align: center;
+        margin-top: 1rem;
     }
 }
 
@@ -109,19 +108,13 @@ span {
 }
 
 .summaryCard {
-    margin-right: 5rem;
-
     margin-top: 12px;
     margin-bottom: 12px;
-    border: transparent 1px grey;
-
+    border: transparent 1px grey;   
 }
 
 .cart-column{
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
-    justify-content: space-evenly;
+    text-align: center;
 }
 
 .checkout {
@@ -145,12 +138,8 @@ span {
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
-    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(238, 234, 234));
-    height: 500px;
-    width: 500px;
-    box-shadow: -3px 2px 5px rgb(226, 225, 225);
-    margin-top: 5rem;
     padding: 10px;
+    text-align: center;
 }
 
 .gif {
@@ -159,16 +148,22 @@ span {
 }
 
 .close {
-    float: left;
-    margin-left: 10px;
     margin-top: 10px;
+    padding-top: 20px;
+}
+
+.close:hover{
+    background-image: linear-gradient(to bottom, red,orange);
+    color: white;
 }
 
 .buttonCont {
     margin-top: 20px;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-self: center;
 }
 
 .card-body:hover {
