@@ -17,7 +17,7 @@ export default class Home extends React.Component {
       }
       : null
     const backgroundImg = (window.screen.width < 600)
-        ? <img src="images/iphone.jpg" alt="homePage" style={height} />
+        ? <img src="images/Moble.jpg" alt="homePage" style={height} />
         :    <img src="images/mountain.jpg" alt="homePage" style={height} />
     const stylin = (window.screen.width < 600)
       ? {
