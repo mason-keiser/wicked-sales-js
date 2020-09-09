@@ -238,6 +238,12 @@ COPY public."cartItems" ("cartItemId", "cartId", "productId", price) FROM stdin;
 
 COPY public.carts ("cartId", "createdAt") FROM stdin;
 4	2020-07-15 17:55:19.484199+00
+5	2020-09-06 18:26:14.318124+00
+6	2020-09-06 19:00:20.537575+00
+7	2020-09-07 23:51:20.804505+00
+8	2020-09-08 22:07:34.090162+00
+9	2020-09-08 22:43:23.069438+00
+10	2020-09-09 19:30:10.685336+00
 \.
 
 
@@ -254,6 +260,12 @@ COPY public.orders ("orderId", "cartId", name, "creditCard", "shippingAddress", 
 9	3	legallycara@hotmail.com	8980809	9 Sunningdale	2020-07-14 21:56:05.826889+00
 10	3	masonksr5@gmail.com	8980809	9 sunningdale	2020-07-14 21:56:36.187154+00
 11	4	masonksr5@gmail.com	112312131412	9 sunningdale	2020-07-16 01:10:39.935117+00
+12	8	Mason Keiser	12312421412412421412	9 sunningdale	2020-09-08 22:40:24.719423+00
+13	8	Mason Keiser	324234234	9 sunningdale	2020-09-08 23:00:56.238471+00
+14	8	Cara Harshman	8980809	9 Sunningdale	2020-09-08 23:02:03.488985+00
+15	8	Cara Harshman	8980809	9 Sunningdale	2020-09-08 23:02:24.238495+00
+16	8	Mason Keiser	19187439713240	9 sunningdale	2020-09-08 23:04:20.163583+00
+17	8	newemail.com	696969696	thius hous	2020-09-08 23:05:59.372532+00
 \.
 
 
@@ -268,6 +280,12 @@ COPY public.products ("productId", name, price, image, "shortDescription", "long
 4	Wax Vac	999	/images/wax-vac.jpg	Gentle way to remove ear wax. Safe and hygienic. Reduces the risk of painful infections.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock\\n.Aesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
 5	Ostrich Pillow	9900	/images/ostrich-pillow.jpg	Create your own snugly space in the world and feel-good anywhere with the ultimate cocoon pillow.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock\\n.Aesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
 6	Tater Mitts	830	/images/tater-mitts.jpg	8 Seconds is all you need with Tater Mitts. Quickly and easily prepare all your favorite potato dishes with Tater Mitts.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock\\n.Aesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
+8	Scrub Daddy	1999	/images/scrubDaddy.jpg	Scrub® Daddy® FlexTexture® Scrubber. It is soft in warm water and firm in cool water and can remove many stains with just water to minimize your use of harsh chemicals.	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+9	Pillow Pad	2999	/images/pillowPad.jpg	Pillow Pad is a multi-angle tablet soft stand that lets you prop up and then rotate all your electronic devices and printed materials for the perfect viewing angle.	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+7	Perfect Smile Veneers	19999	/images/veneers.jpg	Perfect Smile is comfortable, flexible, and fit over your teeth similar to press on veneers.	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+11	The Clapper	8999	/images/clapper.jpg	The Sound Activated On/Off Switch The Clapper can control one or two appliances at the same time by simply clapping your hands!	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+12	Fanny Bank	1599	/images/fannyBank.jpg	With the Fanny Bank, saving your pennies will be a real gas! Makes farting sounds when coins are inserted.	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+13	Lizard Cam	4999	/images/lizardCam.jpg	The amazing new microcamera that goes anywhere you can’t see! Lizard Cam™ is even waterproof, perfect to remove hair and debris from clogged tubs or showers or fix blocked toilets.	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 \.
 
 
@@ -275,21 +293,21 @@ COPY public.products ("productId", name, price, image, "shortDescription", "long
 -- Name: cartItems_cartItemId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 47, true);
+SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 71, true);
 
 
 --
 -- Name: carts_cartId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."carts_cartId_seq"', 4, true);
+SELECT pg_catalog.setval('public."carts_cartId_seq"', 10, true);
 
 
 --
 -- Name: orders_orderId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."orders_orderId_seq"', 11, true);
+SELECT pg_catalog.setval('public."orders_orderId_seq"', 17, true);
 
 
 --
