@@ -98,7 +98,6 @@ span {
 }
 
 .addToCart {
-    box-shadow: -3px 2px 5px rgb(226, 225, 225);
     background-image: linear-gradient(to bottom, rgb(68, 180, 255), rgb(45, 45, 221));
     color: white;
 }
@@ -168,4 +167,14 @@ span {
 
 .card-body:hover {
     background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(255, 255, 255));
+}
+
+#disclaimer {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 32%;
+    text-align: center;
 }

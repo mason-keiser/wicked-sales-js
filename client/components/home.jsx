@@ -1,4 +1,5 @@
 import React from 'react'
+import Disclaimer from './disclaimer'
 
 export default class Home extends React.Component {
     render() {

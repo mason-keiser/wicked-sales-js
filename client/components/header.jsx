@@ -2,7 +2,7 @@ import React from 'react';
 
 class Header extends React.Component {
     render() {
-      const hideOrShow = (this.props.view.name === 'catalog' && this.props.cartNumber === 0)
+      const hideOrShow = (this.props.view.name === 'catalog' && this.props.cartNumber === 0 || this.props.view.name === 'deets')
         ? {
             display: 'none'
         }

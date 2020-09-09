@@ -6,6 +6,7 @@ import CartSummary from './cartSummary'
 import CheckoutForm from './checkoutForm';
 import Modal from './modal'
 import Home from './home';
+import Disclaimer from './disclaimer';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ export default class App extends React.Component {
     this.state = {
       products: [],
       view: {
-        name: 'catalog',
+        name: 'deets',
         params: {}
       },
       cart: []
@@ -93,11 +94,6 @@ export default class App extends React.Component {
 
 
   render() {
-    const hideHome = (this.state.view.name !== 'catalog')
-      ? {
-        display: 'hidden'
-      }
-      : null
     const changeView = this.state.view.name === 'catalog' 
       ? <ProductList view={this.setView} />
       : this.state.view.name === 'cart'
@@ -106,7 +102,10 @@ export default class App extends React.Component {
           ? <CheckoutForm products={this.state.cart} placeOrder={this.placeOrder} setView={this.setView}/>
           : this.state.view.name === 'modal'
             ? <Modal setView={this.setView}/>
-            : <ProductDetails addToCart={this.addToCart} params={this.state.view.params} setView={this.setView}/>;
+            : this.state.view.name === 'deets'
+              ? <Disclaimer params={this.state.view.params} setView={this.setView}/>
+              :<ProductDetails addToCart={this.addToCart} params={this.state.view.params} setView={this.setView}/>
+              
     return (
       <div>
         <Header cartNumber={this.state.cart.length} setView={this.setView} view={this.state.view}/>
