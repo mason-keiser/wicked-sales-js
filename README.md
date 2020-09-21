@@ -1,5 +1,5 @@
 # wicked-sales-js
-A full stack Node.js and React shopping cart app.
+A full stack Node.js and React.js shopping cart app.
 
 * Link: https://wicked-sales.masonkeiser.com/
 # Technologies Used
