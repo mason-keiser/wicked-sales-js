@@ -31,7 +31,7 @@ export default class Home extends React.Component {
         paddingBottom: '2rem'
       }
         return (
-            <div style={hideHome}>
+            <div className='home'style={hideHome}>
                 <div id="buttonDiv" style={hideHome}>
                     <h1 id= "title" className="text-white"style={stylin}>Wicked Sales</h1>
                     <button id='homePageButton' onClick={() => {

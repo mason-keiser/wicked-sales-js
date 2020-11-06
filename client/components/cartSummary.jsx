@@ -20,7 +20,7 @@ export default class CartSummary extends React.Component {
                 <h1 className='' style={{ fontSize: '2rem', width: '10'}}>Your cart is empty!</h1>
                 <img className="gif" style={style} src="https://media.giphy.com/media/3o6Zt4j96fDG4XzO0w/source.gif" height="300"width="480" frameBorder="0" href="https://giphy.com/gifs/94EQmVHkveNck"/>
                 <h5 className="mt-2">hint: Add items to your cart by selecting the add to cart button on each catalog item!</h5>
-                <div className="mt-2" onClick={() => this.props.setView('catalog', {})}>&lt; back to catalog</div>
+                <div className="mt-2 backButton" onClick={() => this.props.setView('catalog', {})}>&lt; back to catalog</div>
               </div>
             </div>
           );
@@ -37,7 +37,7 @@ export default class CartSummary extends React.Component {
         });
         return (
           <div className="container mt-2 col-xs-12">
-            <div onClick={() => this.props.setView('catalog', {})}>&lt; Back to Catalog</div>
+            <div className='back' onClick={() => this.props.setView('catalog', {})}>&lt; Back to Catalog</div>
             <div className='mt-5' style={{ textAlign: "center"}}>
               <h2>Cart total: ${(cartTotal / 100).toFixed(2)}</h2>
               <div className='buttonCont'>

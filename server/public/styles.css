@@ -45,8 +45,18 @@ span {
 .card {
 
     height: 435px;
-    
+    cursor: pointer;
     overflow-y: auto;
+}
+
+.card-body:hover {
+    background-color: black;
+   
+}
+
+.card:hover {
+    border: 1px solid black;
+   
 }
 
 .card-body{
@@ -65,6 +75,50 @@ span {
 
 }
 
+.card > img {
+    object-fit: cover;
+}
+
+.home > img {
+    object-fit: cover;
+}
+
+.back{
+    width: fit-content;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.back:hover {
+    border-bottom: 2px solid black;
+}
+
+#homePageButton:hover {
+    color: black;
+    border: 3px solid black
+}
+
+.backButton{
+    width: fit-content;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.backButton:hover {
+    border-bottom: 2px solid black;
+}
+
+.cartRow:hover{
+    cursor: pointer;
+}
+
+.cartRow > p:hover{
+    cursor: pointer;
+}
+
+.titleContainer{
+    cursor: pointer;
+}
 
 .card-price {
     font-size: 1.3rem;
@@ -91,6 +145,7 @@ span {
 .detailsImg {
     background-color: inherit;
     margin-top: 10px;
+    object-fit: cover;
 }
 
 .fa-shopping-cart {

@@ -29,7 +29,7 @@ export default class ProductDetails extends React.Component {
         ? (
           <div className="container mt-5 mb-5">
             <div className="detailsCard" style={align}>
-              <div onClick={() => this.setView('catalog', {})}>&lt; Back to Catalog</div>
+              <div className='back' onClick={() => this.setView('catalog', {})}>&lt; Back to Catalog</div>
               <div className="row row-cols-1 row-cols-md-1">
                 <div className="col-lg-5 col-xs-12">
                   <img className="detailsImg col-12 mb-3" src={this.state.product.image} alt="" />
