@@ -16,12 +16,12 @@ export default class Disclaimer extends React.Component {
     render() {
         const height = (window.screen.width < 600)
         ? {
-          height: '725px',
+          height: '100vh',
           width: '100%',
           opacity: '90%'
         }
         : {
-          height: '900px',
+          height: '100vh',
           width: '100%',
           opacity: '90%'
         }
