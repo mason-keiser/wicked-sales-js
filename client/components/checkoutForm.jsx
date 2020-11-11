@@ -67,6 +67,9 @@ export default class CheckoutForm extends React.Component {
           <div className="form-group">
             <label htmlFor="shippingAddress">Shipping Address</label>
             <textarea className="form-control" id="shippingAddress" rows="3" value={this.state.shippingAddressValue} onChange={this.handleShippingAddressChange}></textarea>
+            <div className='mt-2'>
+              <input type="checkbox"/><span className='ml-3'>I acknowledge that this is purely for demonstration purposes and no real emails, addresses, or credit card information should be used for the purposes of this app</span>
+            </div>
           </div>
           <div className="d-flex justify-content-between">
             <p onClick={() => this.props.setView('catalog', {})}>&lt; Continue Shopping</p>
