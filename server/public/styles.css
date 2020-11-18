@@ -50,6 +50,10 @@ body {
     .cartIcon{
         margin-top: 5px;
     }
+
+    .card {
+        height: 80vh;
+    }
 }
 span {
     size: 1
@@ -57,10 +61,12 @@ span {
 
 .card {
     object-fit: cover;
-  
     cursor: pointer;
     overflow-y: hidden;
+    
 }
+
+
 
 .card-body:hover {
     background-color: black;
@@ -91,7 +97,6 @@ span {
 .card > img {
     object-fit: cover;
     height: 50%;
-    max-height: 70%
 }
 
 .home > img {
@@ -155,7 +160,7 @@ span {
     padding: 5px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 700px) and (min-height: 500px) {
     #title {
         font-size: 5rem;
     }
@@ -168,6 +173,10 @@ span {
         width: 50%;
         height: 30%;
     }
+
+    .card{
+        height: 50vh;
+    }   
 
     #disclaimer {
         max-width: 50%;
@@ -285,4 +294,15 @@ span {
     right: 0;
     top: 25%;
     text-align: center;
+}
+
+@media screen and (orientation: landscape) and (max-height: 400px) {
+    .card-text {
+        overflow: hidden;
+    }
+    .card-body{
+        overflow: hidden;
+    }
+
+    
 }
