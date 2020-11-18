@@ -1,4 +1,4 @@
-# wicked-sales-js
+# Nomadic Living
 A full stack Node.js and React.js shopping cart app.
 
 * Link: https://wicked-sales.masonkeiser.com/
