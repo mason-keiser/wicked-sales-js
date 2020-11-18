@@ -37,16 +37,19 @@ body {
         font-size: 1rem;
         padding: 0;
     }
+    .cartIcon{
+        margin-top: 5px;
+    }
 }
 span {
     size: 1
 }
 
 .card {
-
+    object-fit: cover;
     height: 435px;
     cursor: pointer;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .card-body:hover {
@@ -144,9 +147,18 @@ span {
     #title {
         font-size: 5rem;
     }
+    #sum {
+        max-width: 50%;
+        align-self: center;
+        margin: 10px;
+    }
 }
 
 @media screen and (max-width: 600) {
+
+    #cartIcon {
+        margin-top: 5px;
+    }
 
     .addToCart {
         margin: auto 0;

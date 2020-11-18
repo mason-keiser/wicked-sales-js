@@ -21,7 +21,15 @@ export default class CheckoutForm extends React.Component {
       creditCard: this.state.creditCardValue,
       shippingAddress: this.state.shippingAddressValue
     };
+    if (obj.name === '') {
+      document.getElementById('name').style.borderColor = 'red'
+    } if (obj.creditCard === '') {
+      document.getElementById('creditCard').style.borderColor = 'red'
+    } if (obj.shippingAddress === '') {
+      document.getElementById('shippingAddress').style.borderColor = 'red'
+    } else {
     callback(obj);
+    }
   }
 
   handleEmailChange() {
@@ -73,7 +81,7 @@ export default class CheckoutForm extends React.Component {
           </div>
           <div className="d-flex justify-content-between">
             <p onClick={() => this.props.setView('catalog', {})}>&lt; Continue Shopping</p>
-            <button type="submit" className="btn addToCart ml-2">Place Order</button>
+            <button type="submit" className="btn addToCart mt-5 ml-2">Place Order</button>
           </div>
         </form>
       </div>

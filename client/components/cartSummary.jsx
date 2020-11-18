@@ -41,8 +41,8 @@ export default class CartSummary extends React.Component {
             <div className='mt-5' style={{ textAlign: "center"}}>
               <h2>Cart total: ${(cartTotal / 100).toFixed(2)}</h2>
               <div className='buttonCont'>
-                <button className="btn addToCart" style={{textAlign: 'center'}} onClick={() => this.props.setView('checkout', {})}>Checkout</button>
-                <button type="button" className="close" style={{textAlign: 'center'}} aria-label="Close" onClick={this.props.removeFromCart}>Clear Cart</button>
+                <button className="btn addToCart" id="sum" style={{textAlign: 'center'}} onClick={() => this.props.setView('checkout', {})}>Checkout</button>
+                <button type="button" id="sum" className="close" style={{textAlign: 'center'}} aria-label="Close" onClick={this.props.removeFromCart}>Clear Cart</button>
               </div>
             </div>
             <hr/>
