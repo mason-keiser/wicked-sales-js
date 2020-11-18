@@ -36,8 +36,10 @@ export default class CheckoutForm extends React.Component {
       const req = document.getElementById('required')
         req.textContent = '* red fields are required for checkout'
         req.style.color = 'red'
-    } else {
-    callback(obj);
+    }
+
+    if (obj.name !== '' && obj.creditCard !== '' && obj.shippingAddress !== '') {
+      callback(obj)
     }
   }
 
