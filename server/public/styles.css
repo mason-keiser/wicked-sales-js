@@ -11,6 +11,10 @@ body {
     scroll-behavior: smooth;
 }
 
+.cardImg{
+    object-fit: cover;
+}
+
 #buttonDiv {
     position: absolute;
     margin-left: auto;

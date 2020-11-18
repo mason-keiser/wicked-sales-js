@@ -23,10 +23,19 @@ export default class CheckoutForm extends React.Component {
     };
     if (obj.name === '') {
       document.getElementById('name').style.borderColor = 'red'
+      const req = document.getElementById('required')
+        req.textContent = '* red fields are required for checkout'
+        req.style.color = 'red'
     } if (obj.creditCard === '') {
       document.getElementById('creditCard').style.borderColor = 'red'
+      const req = document.getElementById('required')
+        req.textContent = '* red fields are required for checkout'
+        req.style.color = 'red'
     } if (obj.shippingAddress === '') {
       document.getElementById('shippingAddress').style.borderColor = 'red'
+      const req = document.getElementById('required')
+        req.textContent = '* red fields are required for checkout'
+        req.style.color = 'red'
     } else {
     callback(obj);
     }
@@ -63,6 +72,7 @@ export default class CheckoutForm extends React.Component {
       <div className="container mt-2">
         <h1>My Cart</h1>
         <h4 className="text-muted">Order Total: {this.calculateTotal()}</h4>
+        <div id="required"></div>
         <form onSubmit={() => this.handleSubmit(this.props.placeOrder)}>
           <div className="form-group">
             <label htmlFor="name">Email</label>
