@@ -244,6 +244,7 @@ COPY public.carts ("cartId", "createdAt") FROM stdin;
 8	2020-09-08 22:07:34.090162+00
 9	2020-09-08 22:43:23.069438+00
 10	2020-09-09 19:30:10.685336+00
+11	2020-11-17 23:44:11.425852+00
 \.
 
 
@@ -266,6 +267,9 @@ COPY public.orders ("orderId", "cartId", name, "creditCard", "shippingAddress", 
 15	8	Cara Harshman	8980809	9 Sunningdale	2020-09-08 23:02:24.238495+00
 16	8	Mason Keiser	19187439713240	9 sunningdale	2020-09-08 23:04:20.163583+00
 17	8	newemail.com	696969696	thius hous	2020-09-08 23:05:59.372532+00
+18	11				2020-11-18 00:05:03.211846+00
+19	11	thisis an	12423155	new address	2020-11-18 00:08:26.336891+00
+20	11	thisguy@thehouse.com	34253524	9 sunningdale	2020-11-18 02:03:26.758182+00
 \.
 
 
@@ -274,18 +278,15 @@ COPY public.orders ("orderId", "cartId", name, "creditCard", "shippingAddress", 
 --
 
 COPY public.products ("productId", name, price, image, "shortDescription", "longDescription") FROM stdin;
-1	Shake Weight	2999	/images/shake-weight.jpg	Dynamic Inertia technology ignites muscles in arms, shoulders, and chest.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock\\n.Aesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-2	ShamWow	2595	/images/shamwow.jpg	It's like a chamois, towel, and sponge, all in one! Soaks up to 10x it's weight in any liquid!	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock\\n.Aesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-3	Snuggie	2900	/images/snuggie.jpg	Super-Soft Fleece with pockets! One Size fits all Adults! Keeps you Warm & Your Hands-Free!	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock\\n.Aesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-4	Wax Vac	999	/images/wax-vac.jpg	Gentle way to remove ear wax. Safe and hygienic. Reduces the risk of painful infections.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock\\n.Aesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-5	Ostrich Pillow	9900	/images/ostrich-pillow.jpg	Create your own snugly space in the world and feel-good anywhere with the ultimate cocoon pillow.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock\\n.Aesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-6	Tater Mitts	830	/images/tater-mitts.jpg	8 Seconds is all you need with Tater Mitts. Quickly and easily prepare all your favorite potato dishes with Tater Mitts.	Lorem ipsum dolor amet fashion axe pour-over jianbing, adaptogen waistcoat tacos master cleanse pitchfork next level. Thundercats pour-over chartreuse 90's. Master cleanse hot chicken ennui offal. Freegan slow-carb offal hell of. Umami polaroid wolf slow-carb next level. Gentrify cardigan seitan, kombucha tacos chambray roof party typewriter man braid. Tote bag lo-fi hell of chia fam hammock\\n.Aesthetic photo booth la croix, vaporware leggings biodiesel man braid tumeric skateboard tousled slow-carb four dollar toast synth pabst pickled. Typewriter church-key chia slow-carb vice gochujang actually. Shoreditch austin woke hot chicken, single-origin coffee ugh affogato four loko green juice. Migas iPhone four dollar toast mustache.
-8	Scrub Daddy	1999	/images/scrubDaddy.jpg	Scrub® Daddy® FlexTexture® Scrubber. It is soft in warm water and firm in cool water and can remove many stains with just water to minimize your use of harsh chemicals.	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-9	Pillow Pad	2999	/images/pillowPad.jpg	Pillow Pad is a multi-angle tablet soft stand that lets you prop up and then rotate all your electronic devices and printed materials for the perfect viewing angle.	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-7	Perfect Smile Veneers	19999	/images/veneers.jpg	Perfect Smile is comfortable, flexible, and fit over your teeth similar to press on veneers.	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-11	The Clapper	8999	/images/clapper.jpg	The Sound Activated On/Off Switch The Clapper can control one or two appliances at the same time by simply clapping your hands!	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-12	Fanny Bank	1599	/images/fannyBank.jpg	With the Fanny Bank, saving your pennies will be a real gas! Makes farting sounds when coins are inserted.	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-13	Lizard Cam	4999	/images/lizardCam.jpg	The amazing new microcamera that goes anywhere you can’t see! Lizard Cam™ is even waterproof, perfect to remove hair and debris from clogged tubs or showers or fix blocked toilets.	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+14	King Size tent	16999	/images/tent.jpg	With a roomy interior that divides to create 2 private rooms, the King Size tent provides comfortable 3-season protection for you, your family and your gear	longDescription
+15	ALPS Mountaineering Wasatch 55	9999	/images/hiking-backpack-packed-main.jpg	Perfectly sized for extended, overnight trail adventures, the ALPS Mountaineering Wasatch 55 pack rides comfortably on your back with Lycra® covered suspension components.	longDescription
+16	Therm-a-Rest Slacker Hammock	5999	/images/hammock.png	Slack off in a soft polyester hammock that feels nicer feel than nylon. The Therm-a-Rest Slacker hammock stuffs into an attached pocket that doubles as a stash pocket for your tablet as you relax.	longDescription
+17	ALPS Mountaineering Vertex	18999	/images/air.jpg	Whether you have out-of-town guests staying with you or youre camping in the great outdoors, the ALPS Mountaineering Vertex double air bed provides a comfortable place for slumber. Includes a pump.	longDescription
+18	Triton Propane Stove	29999	/images/stove.jpg	Take camp cooking to the next level with the Triton Propane Stove. Just light it up and dial in your heat with the two independently adjustable burners and you can be cooking over 22,000 BTUs of power in no time. The cooking surface offers plenty of room to fit a 12-in. and 10-in. pan simultaneously. Meanwhile, the PerfectFlow pressure control technology keeps the heat steady, even in extreme conditions.	longDescription
+19	Miltons Hiker Jacket	29999	/images/the-best-hiking-jacket.webp	Classic mountaineering-inspired design lines in a tried-and-true waterproof fabric-this lightweight nylon rain jacket is an everyday favorite thanks to its stylish, efficient, and comfortable take on protecting you from the wind and wet weather.	longDescription
+20	Komperdell Trekking Poles	4599	/images/trekker.jpg	Komperdell Free Touring Thermo trekking poles are that hiking partner who never lets you down. Nonslip grip extensions let you grab the pole lower on steep passages without adjusting the pole length.	longDescription
+21	Coleman Foldable Chairs	2599	/images/campingchair.jpg	The comfortable and top quality camping chair is important to your enjoyment for afternoon fishing or campfire. This portable quad chair is perfect for camping activity. Also, it has side pockets & cooler to store your cold drinks, magazine & snacks.	longDescription
+22	Napier Backroadz Camo Truck Tent	49999	/images/trucktent.jpg	With a seamless assembly in the bed of your truck, you can take to the back roads, the back woods, or the backyard in the back of your pick-up. Go unnoticed or stand out in your Backroadz CAMO Truck Tent! The must-have accessory for every outdoor adventure enthusiast. The Backroadz Camo Truck Tent assembles seamlessly in the bed of your truck, providing you with the ultimate campsite for every hunting, fishing or camping trip!.	longDescription
 \.
 
 
@@ -293,28 +294,28 @@ COPY public.products ("productId", name, price, image, "shortDescription", "long
 -- Name: cartItems_cartItemId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 71, true);
+SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 77, true);
 
 
 --
 -- Name: carts_cartId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."carts_cartId_seq"', 10, true);
+SELECT pg_catalog.setval('public."carts_cartId_seq"', 11, true);
 
 
 --
 -- Name: orders_orderId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."orders_orderId_seq"', 17, true);
+SELECT pg_catalog.setval('public."orders_orderId_seq"', 20, true);
 
 
 --
 -- Name: products_productId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."products_productId_seq"', 1, false);
+SELECT pg_catalog.setval('public."products_productId_seq"', 1, true);
 
 
 --
