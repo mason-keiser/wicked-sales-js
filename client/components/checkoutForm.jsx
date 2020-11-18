@@ -93,7 +93,7 @@ export default class CheckoutForm extends React.Component {
           </div>
           <div className="d-flex justify-content-between">
             <p onClick={() => this.props.setView('catalog', {})}>&lt; Continue Shopping</p>
-            <button type="submit" className="btn addToCart mt-5 ml-2">Place Order</button>
+            <button type="submit" className="btn addToCart mt-5 ml-2 mb-4">Place Order</button>
           </div>
         </form>
       </div>
