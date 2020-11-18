@@ -14,7 +14,7 @@ export default class Home extends React.Component {
         return (
             <div className='home'style={hideHome}>
                 <div id="buttonDiv">
-                    <h1 id= "title" className="text-white">Nomadic</h1>
+                    <h1 id= "title" className="text-white">Nomadic Living</h1>
                     <button id='homePageButton' onClick={() => {
                         const element = document.getElementById('productList').scrollIntoView()
                     }}>View Products</button>

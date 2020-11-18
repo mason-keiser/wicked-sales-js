@@ -4,13 +4,9 @@ export default class CartSummaryItem extends React.Component {
     render() {
       const img = (window.screen.width)
         ? {
-          height: '200px',
-          width: '200px'
+          border: '1px solid black'
         }
-        : {
-          height: '400px',
-          width: '400px'
-        }
+        : null
         return (
           <div className= 'summaryCard'>
             <div className="card-body col-xs-12">

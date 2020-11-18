@@ -10,7 +10,7 @@ class Header extends React.Component {
         return(
             <div className='navbar' style={hideOrShow}>
                 <div className='titleContainer' onClick={() => this.props.setView('catalog', {})}>
-                    <div className='title'>Nomadic</div>
+                    <div className='title'>Nomadic Living</div>
                 </div>
                 <div className="row text-white pt-3 cartRow" onClick={() => this.props.setView('cart', {})}>
                   <p>{this.props.cartNumber} item(s)</p>
