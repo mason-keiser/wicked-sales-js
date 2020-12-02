@@ -306,3 +306,13 @@ span {
 
     
 }
+
+@media screen and (orientation: landscape) and (min-width: 1000px) and (max-height: 1030px) {
+    .card {
+       height: 100%;
+       overflow: hidden;
+    }
+    .card-title {
+        margin-top: 50px;
+    }
+}

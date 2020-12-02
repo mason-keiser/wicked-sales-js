@@ -229,6 +229,7 @@ ALTER TABLE ONLY public.products ALTER COLUMN "productId" SET DEFAULT nextval('p
 --
 
 COPY public."cartItems" ("cartItemId", "cartId", "productId", price) FROM stdin;
+80	12	15	9999
 \.
 
 
@@ -245,6 +246,7 @@ COPY public.carts ("cartId", "createdAt") FROM stdin;
 9	2020-09-08 22:43:23.069438+00
 10	2020-09-09 19:30:10.685336+00
 11	2020-11-17 23:44:11.425852+00
+12	2020-11-18 18:09:39.878878+00
 \.
 
 
@@ -270,6 +272,7 @@ COPY public.orders ("orderId", "cartId", name, "creditCard", "shippingAddress", 
 18	11				2020-11-18 00:05:03.211846+00
 19	11	thisis an	12423155	new address	2020-11-18 00:08:26.336891+00
 20	11	thisguy@thehouse.com	34253524	9 sunningdale	2020-11-18 02:03:26.758182+00
+21	12	newemail.com	23423532567	8 vilevile 1234124	2020-11-18 18:10:28.072957+00
 \.
 
 
@@ -282,11 +285,11 @@ COPY public.products ("productId", name, price, image, "shortDescription", "long
 15	ALPS Mountaineering Wasatch 55	9999	/images/hiking-backpack-packed-main.jpg	Perfectly sized for extended, overnight trail adventures, the ALPS Mountaineering Wasatch 55 pack rides comfortably on your back with Lycra® covered suspension components.	longDescription
 16	Therm-a-Rest Slacker Hammock	5999	/images/hammock.png	Slack off in a soft polyester hammock that feels nicer feel than nylon. The Therm-a-Rest Slacker hammock stuffs into an attached pocket that doubles as a stash pocket for your tablet as you relax.	longDescription
 17	ALPS Mountaineering Vertex	18999	/images/air.jpg	Whether you have out-of-town guests staying with you or youre camping in the great outdoors, the ALPS Mountaineering Vertex double air bed provides a comfortable place for slumber. Includes a pump.	longDescription
-18	Triton Propane Stove	29999	/images/stove.jpg	Take camp cooking to the next level with the Triton Propane Stove. Just light it up and dial in your heat with the two independently adjustable burners and you can be cooking over 22,000 BTUs of power in no time. The cooking surface offers plenty of room to fit a 12-in. and 10-in. pan simultaneously. Meanwhile, the PerfectFlow pressure control technology keeps the heat steady, even in extreme conditions.	longDescription
 19	Miltons Hiker Jacket	29999	/images/the-best-hiking-jacket.webp	Classic mountaineering-inspired design lines in a tried-and-true waterproof fabric-this lightweight nylon rain jacket is an everyday favorite thanks to its stylish, efficient, and comfortable take on protecting you from the wind and wet weather.	longDescription
 20	Komperdell Trekking Poles	4599	/images/trekker.jpg	Komperdell Free Touring Thermo trekking poles are that hiking partner who never lets you down. Nonslip grip extensions let you grab the pole lower on steep passages without adjusting the pole length.	longDescription
 21	Coleman Foldable Chairs	2599	/images/campingchair.jpg	The comfortable and top quality camping chair is important to your enjoyment for afternoon fishing or campfire. This portable quad chair is perfect for camping activity. Also, it has side pockets & cooler to store your cold drinks, magazine & snacks.	longDescription
-22	Backroadz Truck Tent	49999	/images/trucktent.jpg	With a seamless assembly in the bed of your truck, you can take to the back roads, the back woods, or the backyard in the back of your pick-up. Go unnoticed or stand out in your Backroadz CAMO Truck Tent! The must-have accessory for every outdoor adventure enthusiast.	longDescription
+18	Triton Propane Stove	29999	/images/stove.jpg	Take camp cooking to the next level with the Triton Propane Stove. Just light it up and dial in your heat with the two independently adjustable burners and you can be cooking over 22,000 BTUs of power in no time. The cooking surface offers plenty of room to fit a 12-in. and 10-in. pan simultaneously.	longDescription
+22	Napier Camo Truck Tent	49999	/images/trucktent.jpg	With a seamless assembly in the bed of your truck, you can take to the back roads or the back woods in the back of your pick-up. The must-have accessory for every outdoor adventure enthusiast. The Backroadz Camo Truck Tent assembles seamlessly in the bed of your truck, providing you with the ultimate campsite for every outdoors trip!	longDescription
 \.
 
 
@@ -294,21 +297,21 @@ COPY public.products ("productId", name, price, image, "shortDescription", "long
 -- Name: cartItems_cartItemId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 77, true);
+SELECT pg_catalog.setval('public."cartItems_cartItemId_seq"', 80, true);
 
 
 --
 -- Name: carts_cartId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."carts_cartId_seq"', 11, true);
+SELECT pg_catalog.setval('public."carts_cartId_seq"', 12, true);
 
 
 --
 -- Name: orders_orderId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."orders_orderId_seq"', 20, true);
+SELECT pg_catalog.setval('public."orders_orderId_seq"', 21, true);
 
 
 --
